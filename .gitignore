@@ -1,0 +1,112 @@
+############################
+# macOS
+############################
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+############################
+# Xcode / iOS
+############################
+# Build artifacts
+DerivedData/
+build/
+
+# User-specific Xcode files
+xcuserdata/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# Swift Package Manager
+.build/
+Package.resolved
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Xcode logs
+*.log
+
+############################
+# Core ML / ONNX / PyTorch
+############################
+# Models (generated artifacts)
+*.mlmodel
+*.mlmodelc
+*.onnx
+*.pt
+*.pth
+*.ckpt
+
+# Converted / quantized variants
+*converted*
+*quantized*
+
+############################
+# Python
+############################
+# Bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Packaging
+*.egg-info/
+dist/
+build/
+
+############################
+# Jupyter / Notebooks
+############################
+.ipynb_checkpoints/
+
+############################
+# ML Experiments / Outputs
+############################
+runs/
+logs/
+outputs/
+checkpoints/
+models/
+
+# MLflow
+mlruns/
+
+############################
+# Datasets (DO NOT COMMIT)
+############################
+data/
+datasets/
+raw_data/
+processed_data/
+
+############################
+# Environment & Secrets
+############################
+.env
+.env.*
+secrets/
+*.key
+*.pem
+
+############################
+# Editors / IDEs
+############################
+.vscode/
+.idea/
+*.swp
+*.swo
+
+############################
+# Misc
+############################
+Thumbs.db
