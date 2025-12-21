@@ -46,7 +46,7 @@ Training is performed in two stages:
 2. **Emotion Training**  
    - Backbone and existing heads are frozen  
    - Only the emotion head is trained on FER2013  
-   - This selective fine-tuning strategy reduces training time and limits catastrophic forgetting
+   - This selective fine-tuning strategy reduces training time
 
 All experiments are conducted in **Google Colab**, using GPU acceleration when available.
 
