@@ -92,3 +92,24 @@ To assess real-world performance, a small evaluation dataset is collected direct
 Results show a clear performance gap compared to validation metrics, highlighting the impact of domain shift, dataset bias, and label-space mismatch. While inference latency is low and stable, predictive performance degrades under real-world conditions, especially for emotion recognition and out-of-distribution inputs.
 
 These findings underline the importance of careful evaluation design and domain alignment when deploying biometric models on edge devices.
+
+## References
+
+* Sandler, M., Howard, A., Zhu, M., Zhmoginov, A., & Chen, L.-C. (2018). *MobileNetV2: Inverted residuals and linear bottlenecks*. IEEE Conference on Computer Vision and Pattern Recognition (CVPR).
+
+* Zhang, Y., & Yang, Q. (2017). *A survey on multi-task learning*. IEEE Transactions on Knowledge and Data Engineering.
+
+* Levi, G., & Hassner, T. (2015). *Age and gender classification using convolutional neural networks*. IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW).
+
+* Kärkkäinen, K., & Joo, J. (2021). *FairFace: Face attribute dataset for balanced race, gender, and age*. IEEE/CVF Winter Conference on Applications of Computer Vision (WACV).
+
+* Goodfellow, I. J., et al. (2013). *Challenges in representation learning: A report on three machine learning contests*. Neural Networks.
+
+* Yosinski, J., et al. (2014). *How transferable are features in deep neural networks?* Advances in Neural Information Processing Systems (NeurIPS).
+
+* Paszke, A., et al. (2019). *PyTorch: An imperative style, high-performance deep learning library*. Advances in Neural Information Processing Systems (NeurIPS).
+
+* Apple Inc. (2023). *Core ML documentation*. [https://developer.apple.com/documentation/coreml](https://developer.apple.com/documentation/coreml)
+
+* Mikhailiuk, A. (2022). *On the edge—Deploying deep learning applications on mobile*. Medium.
+
