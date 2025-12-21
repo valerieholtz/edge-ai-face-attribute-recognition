@@ -62,8 +62,7 @@ PyTorch → TorchScript → Core ML (.mlpackage) → iOS App
 - The model architecture is reconstructed for deployment and loaded with trained weights
 - TorchScript is used to serialize the model into a static, Python-independent format
 - Conversion to Core ML is performed using `coremltools`
-- Core ML automatically selects the most suitable compute units (CPU, GPU, Neural Engine) at runtime
-
+  
 This pipeline enables fully **on-device inference** without any network dependency.
 
 ---
