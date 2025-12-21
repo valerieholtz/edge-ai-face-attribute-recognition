@@ -89,6 +89,6 @@ To assess real-world performance, a small evaluation dataset is collected direct
   - happy / sad facial expressions
 - **5 additional baby images** used as out-of-distribution (OOD) samples
 
-Results show a clear performance gap compared to validation metrics, highlighting the impact of **domain shift, dataset bias, and label-space mismatch**. While inference latency is low and stable, predictive performance degrades under real-world conditions, especially for emotion recognition and out-of-distribution inputs.
+Results show a clear performance gap compared to validation metrics, highlighting the impact of domain shift, dataset bias, and label-space mismatch. While inference latency is low and stable, predictive performance degrades under real-world conditions, especially for emotion recognition and out-of-distribution inputs.
 
 These findings underline the importance of careful evaluation design and domain alignment when deploying biometric models on edge devices.
