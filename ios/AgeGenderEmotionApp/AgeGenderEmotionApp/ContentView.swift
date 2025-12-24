@@ -31,7 +31,7 @@ struct ContentView: View {
             }
             .disabled(selectedImage == nil)
 
-            // Step 6.2: Benchmark over 20 runs (report-ready)
+            // Benchmark over 20 runs
             Button("Benchmark image inference (20 runs)") {
                 benchmarkImageInference(runs: 20)
             }
@@ -71,12 +71,8 @@ struct ContentView: View {
 
             let model = try AgeGenderEmotion(configuration: MLModelConfiguration())
 
-            // IMPORTANT:
-            // - If you trained with ImageNet normalization, keep normalizeImageNet=true.
-            // - If you trained WITHOUT normalization, set it to false.
             let input = try uiImageToCHWTensor(img, size: 224, normalizeImageNet: true)
 
-            // Warmup (recommended)
             for _ in 0..<3 { _ = try model.prediction(image: input) }
 
             var times: [Double] = []
@@ -137,7 +133,7 @@ struct ContentView: View {
         }
     }
 
-    // Convert a UIImage into a Float32 Core ML tensor shaped (1,3,H,W)
+    // Converts UIImage into a Float32 Core ML tensor shaped (1,3,H,W)
     private func uiImageToCHWTensor(_ image: UIImage, size: Int, normalizeImageNet: Bool) throws -> MLMultiArray {
         guard let cgImage = image.cgImage else {
             throw NSError(domain: "ImageConversion", code: -1, userInfo: [NSLocalizedDescriptionKey: "UIImage has no CGImage"])
@@ -202,7 +198,7 @@ struct ContentView: View {
         return tensor
     }
 
-    // Argmax over a 1D MLMultiArray.
+    // Argmax over a 1D MLMultiArray
     private func argmax(_ arr: MLMultiArray) -> Int {
         var bestIndex = 0
         var bestValue = Double.leastNormalMagnitude
