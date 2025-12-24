@@ -1,9 +1,8 @@
-//
+
 //  ContentView.swift
 //  AgeGenderEmotionApp
-//
 //  Benchmark: Step 6.2 (20 runs)
-//
+
 
 import SwiftUI
 import CoreML
