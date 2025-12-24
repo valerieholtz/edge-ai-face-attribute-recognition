@@ -1,7 +1,7 @@
 
 //  ContentView.swift
 //  AgeGenderEmotionApp
-//  Benchmark: Step 6.2 (20 runs)
+//  Benchmark: (20 runs)
 
 
 import SwiftUI
@@ -59,9 +59,7 @@ struct ContentView: View {
         }
     }
 
-    /// Step 6.2: Benchmark inference time over N runs on the currently selected image.
-    /// - Warms up 3 runs to stabilize caching/allocations.
-    /// - Measures N runs and reports avg/min/max in ms.
+    /// Benchmark inference time over N runs on the currently selected image.
     private func benchmarkImageInference(runs: Int) {
         guard let img = selectedImage else {
             statusText = "No image selected."
@@ -104,8 +102,8 @@ struct ContentView: View {
         }
     }
 
-    // --- helpers below are required for the benchmark ---
-
+    // benchmark helper function
+    
     private func runImageInference() {
         guard let img = selectedImage else {
             statusText = "No image selected."
@@ -139,7 +137,7 @@ struct ContentView: View {
         }
     }
 
-    /// Convert a UIImage into a Float32 Core ML tensor shaped (1,3,H,W) in CHW order.
+    // Convert a UIImage into a Float32 Core ML tensor shaped (1,3,H,W)
     private func uiImageToCHWTensor(_ image: UIImage, size: Int, normalizeImageNet: Bool) throws -> MLMultiArray {
         guard let cgImage = image.cgImage else {
             throw NSError(domain: "ImageConversion", code: -1, userInfo: [NSLocalizedDescriptionKey: "UIImage has no CGImage"])
@@ -204,7 +202,7 @@ struct ContentView: View {
         return tensor
     }
 
-    /// Argmax over a 1D MLMultiArray.
+    // Argmax over a 1D MLMultiArray.
     private func argmax(_ arr: MLMultiArray) -> Int {
         var bestIndex = 0
         var bestValue = Double.leastNormalMagnitude
