@@ -76,8 +76,6 @@ Key features:
 - On-device prediction of age, gender, and facial expression
 - Benchmark mode measuring inference latency over multiple runs
 
-Inference is executed synchronously using Apple’s Core ML runtime.
-
 ---
 
 ## On-Device Evaluation
