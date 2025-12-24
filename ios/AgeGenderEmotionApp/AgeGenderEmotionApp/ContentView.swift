@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var selectedImage: UIImage? = nil
     @State private var showPicker: Bool = false
 
-    // Update these to match YOUR training label order
+    // Needs to match training label order
     private let ageLabels = ["Young", "Adult", "Senior"] // 3 classes
     private let genderLabels = ["Female", "Male"]        // 2 classes
     private let emotionLabels = ["Angry", "Disgust", "Fear", "Happy", "Sad", "Surprise", "Neutral"] // 7 classes
